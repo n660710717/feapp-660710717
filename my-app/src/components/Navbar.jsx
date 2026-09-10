@@ -37,6 +37,10 @@ function Navbar() {
         <NavLink to="/" className={linkClass}>หน้าแรก</NavLink>
         <NavLink to="/movies" className={linkClass}>หนังทั้งหมด</NavLink>
         <NavLink to="/about" className={linkClass}>เกี่ยวกับเรา</NavLink>
+
+        <button className="bg-blue-500 text-white px-4 py-1.5 rounded hover:bg-blue-600 transition ml-4">
+          เข้าสู่ระบบ
+        </button>
       </div>
     </nav>
   );
