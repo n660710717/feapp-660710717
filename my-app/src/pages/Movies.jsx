@@ -4,16 +4,16 @@ import { movies } from '../data';
 import SearchBox from '../components/SearchBox';
 import GenreBox from '../components/GenreBox';
 
-const GENRES = [...new Set(movies.map(m => m.genre))];  // ดึง genre ที่ไม่ซ้ำกัน
+const GENRES = [...new Set(movies.map(m => m.genre))];
 
 function Movies() {
   const [query, setQuery] = useState('');
   const [genre, setGenre] = useState('all');
 
-  //const shown = movies.filter(m => m.title.toLowerCase().includes(query.toLowerCase()));
   const q = query.trim().toLowerCase();
   const shown = movies.filter(m => 
-    m.title.toLowerCase().split(' ').some(word => word.startsWith(q)) && (genre === 'all' || m.genre === genre));  // แยกคำแล้วตรวจสอบทีละคำ
+    m.title.toLowerCase().split(' ').some(word => word.startsWith(q)) && (genre === 'all' || m.genre === genre)
+  );
   
   return (
     <div className="mx-auto max-w-5xl p-8">
